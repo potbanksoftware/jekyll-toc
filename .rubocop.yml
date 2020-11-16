@@ -21,6 +21,8 @@ Metrics/ClassLength:
 
 Naming/FileName:
   Enabled: false
+Naming/VariableNumber:
+  Enabled: false
 
 Layout/LineLength:
   Enabled: false
