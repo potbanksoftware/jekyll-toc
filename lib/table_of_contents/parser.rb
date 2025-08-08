@@ -31,7 +31,7 @@ module Jekyll
           # )
 
           # Add link icon after text
-          entry[:header_content].add_next_sibling(
+          entry[:header_content].add_child(
             %(<a class="anchor" href="##{entry[:id]}"aria-hidden="true">#{@configuration.anchor_symbol}</a>)
           )
         end
@@ -59,7 +59,7 @@ module Jekyll
             id: suffix_num.zero? ? id : "#{id}-#{suffix_num}",
             text: CGI.escapeHTML(text),
             node_name: node.name,
-            header_content: node.children.first,
+            header_content: node,
             h_num: node.name.delete('h').to_i
           }
         end
